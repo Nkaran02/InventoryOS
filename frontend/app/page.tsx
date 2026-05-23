@@ -20,7 +20,7 @@ export default function HomePage() {
   const router = useRouter()
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/products')
+    fetch('https://inventoryos.onrender.com/api/products')
       .then((res) => res.json())
       .then((data) => setProducts(data))
   }, [])
@@ -33,7 +33,7 @@ export default function HomePage() {
       setError('')
 
       const res = await fetch(
-        'http://127.0.0.1:8000/api/reservations',
+        'https://inventoryos.onrender.com/api/reservations',
         {
           method: 'POST',
           headers: {

@@ -40,7 +40,7 @@ export default function ReservationPage() {
 
   const confirmReservation = async () => {
     const res = await fetch(
-      `http://127.0.0.1:8000/api/reservations/${reservation.id}/confirm`,
+      `https://inventoryos.onrender.com/api/reservations/${reservation.id}/confirm`,
       {
         method: 'POST',
       }
@@ -56,7 +56,7 @@ export default function ReservationPage() {
 
   const cancelReservation = async () => {
     await fetch(
-      `http://127.0.0.1:8000/api/reservations/${reservation.id}/release`,
+      `https://inventoryos.onrender.com/api/reservations/${reservation.id}/release`,
       {
         method: 'POST',
       }
